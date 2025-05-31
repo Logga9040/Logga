@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page 3 - The Path to Success</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00bfff;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a.active {
+      background-color: #00bfff;
+      color: #ffffff;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* PREVIOUS BUTTON */
+    .previous-button-container {
+      max-width: 1200px;
+      margin: 20px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .previous-button {
+      background-color: #00bfff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .previous-button:hover {
+      background-color: #009acd;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,191,255,0.4);
+      transition: transform 0.5s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-duration: 1.5s;
+    }
+
+    .section:nth-child(odd) img {
+      animation-name: slideInLeft, floatUpDown;
+      animation-delay: 0.3s, 1.8s;
+      animation-timing-function: ease-out, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-direction: normal, alternate;
+    }
+
+    .section:nth-child(even) img {
+      animation-name: slideInRight, floatUpDown;
+      animation-delay: 0.3s, 1.8s;
+      animation-timing-function: ease-out, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-direction: normal, alternate;
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(100px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .text-content {
+      flex: 1;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeInText 1.2s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    .text-content h2 {
+      font-size: 1.6rem;
+      color: #00bfff;
+      margin-bottom: 12px;
+    }
+
+    /* JUSTIFY TEXT */
+    .text-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+      animation: fadeInUp 2s ease-in;
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+    }
+
+    @keyframes fadeInText {
+      to { opacity: 1; }
+      from { opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .section img {
+        max-width: 90%;
+        margin-bottom: 20px;
+      }
+
+      /* Center previous button on small screens */
+      .previous-button-container {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="King.Png" alt="Profile" class="logo-img" />
+      <div class="logo-text">Loggadeephan</div>
+    </div>
+    <nav>
+      <a href="Career.html">Career</a>
+      <a href="Step by step.html">Step-by-Step</a>
+      <a href="Inspiration.html" class="active">Inspiration & Resources</a>
+    </nav>
+  </header>
+
+   <main>
+    <div class="section">
+      <img src="zach-king.png" alt="Founding Stage" />
+      <div class="text-content">
+        <h2>Zach King</h2>
+        <p>Zach King is an American content creator known for his mind-blowing magic videos that use clever visual effects and seamless editing. Born in 1990, he rose to fame on Vine and later became one of the most followed creators on TikTok. His videos, often called “digital magic,” have captivated millions worldwide, including his record-breaking Harry Potter illusion. He is admired for combining creativity, storytelling, and tech to make everyday moments feel magical.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="Joshua.jpg" alt="Growth & Progress" />
+      <div class="text-content">
+        <h2>Joshmadj</h2>
+        <p>Joshmadj, also known as Joshua Michael, is a Malaysian content creator celebrated for his comedic skits, relatable POVs, and engaging social commentary on TikTok. Since joining the platform in 2019, he has amassed over 473,000 followers and 15 million likes, captivating audiences with his humorous takes on everyday scenarios and cultural observations.Joshmadj, also known as Joshua Michael, is featured in the Tamil-language web series Inthu Dealing Pudichereku. This series showcases his acting skills in various comedic and dramatic roles, contributing to his growing popularity in the Malaysian entertainment scene.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="Sofyank.jpg" alt="Next Chapter" />
+      <div class="text-content">
+        <h2>Sofyank</h2>
+        <p>Mohamad Sofian bin Abdullah, known online as Sofyank, is a Malaysian digital content creator and VFX artist celebrated for his captivating visual effects and storytelling. Born on November 30, 1996, in Wakaf Bharu, Kelantan, he began his creative journey with limited resources, often editing videos using a borrowed laptop and self-taught techniques.Building on his success, Sofyank has collaborated with Hollywood stars such as Paul Rudd and Jonathan Majors, creating VFX content for Ant-Man and the Wasp: Quantumania. His work has also caught the attention of actor Will Smith, who shared one of his edited videos on social media .</p>
+      </div>
+    </div>
+  </main>
+<div class="previous-button-container">
+    <a href="Step by Step.html" class="previous-button" aria-label="Go to previous page">← Step By Step</a>
+  </div>
+
+
+  <footer>
+   &copy; 2025 Loggadeephan. All rights reserved. | Designed with passion and creativity
+  </footer>
+
+</body>
+</html>
