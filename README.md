@@ -1,13 +1,1 @@
-![Sofyank](https://github.com/user-attachments/assets/5e23e1c4-72f8-404e-9d94-ee9ba95671df)
 
-![zach-king](https://github.com/user-attachments/assets/fec85a6c-5525-49d1-aa3f-d6f829b1baeb)
-![Joshua](https://github.com/user-attachments/assets/42b85759-c329-4734-82b9-5ede7831da0c)
-![C1](https://github.com/user-attachments/assets/12dac1da-f5ac-4d45-9158-abfa34285687)
-![Grow](https://github.com/user-attachments/assets/9c339490-c9dc-4b25-ab87-6a838a3d98a1)
-![Branding](https://github.com/user-attachments/assets/9008c491-89c1-460d-ab31-8ea28c87692f)
-![Background](https://github.com/user-attachments/assets/700fdcfb-6196-4a13-af41-026d71b39190)
-![Logo](https://github.com/user-attachments/assets/ce3d117a-ed81-4a80-baf0-a0cc8b467eef)
-![Research](https://github.com/user-attachments/assets/ea923337-32e1-41b4-800c-b85605199a07)
-![Skilss](https://github.com/user-attachments/assets/68943172-f8e7-4bce-952c-46e5bb5dec9a)
-![Practice](https://github.com/user-attachments/assets/742b36a3-43fa-4229-b0ba-bc4ad87f5ff1)
-![Connect](https://github.com/user-attachments/assets/f2adc955-0583-4e75-af26-70d78c30d31d)
